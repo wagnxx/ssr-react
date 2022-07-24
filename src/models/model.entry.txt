@@ -1,0 +1,124 @@
+entitys = [
+  [
+    'sequelize',
+    Sequelize {
+      options: [Object],
+      config: [Object],
+      dialect: [SqliteDialect],
+      queryInterface: [SQLiteQueryInterface],
+      models: [Object],
+      modelManager: [ModelManager],
+      connectionManager: [ConnectionManager]
+    }
+  ],
+  [
+    'options',
+    {
+      timestamps: true,
+      validate: {},
+      freezeTableName: true,
+      underscored: false,
+      paranoid: false,
+      rejectOnEmpty: false,
+      whereCollection: null,
+      schema: null,
+      schemaDelimiter: '',
+      defaultScope: {},
+      scopes: {},
+      indexes: [],
+      whereMergeStrategy: 'overwrite',
+      name: [Object],
+      omitNull: false,
+      sequelize: [Sequelize],
+      tableName: 'tb_book',
+      hooks: {}
+    }
+  ],
+  [ 'associations', {} ],
+  [ 'underscored', false ],
+  [ 'tableName', 'tb_book' ],
+  [ '_schema', null ],
+  [ '_schemaDelimiter', '' ],
+  [
+    'rawAttributes',
+    {
+      id: [Object],
+      username: [Object],
+      birthday: [Object],
+      createdAt: [Object],
+      updatedAt: [Object]
+    }
+  ],
+  [ '_indexes', [] ],
+  [ 'primaryKeys', { id: [Object] } ],
+  [ '_readOnlyAttributes', Set(2) { 'createdAt', 'updatedAt' } ],
+  [
+    '_timestampAttributes',
+    { createdAt: 'createdAt', updatedAt: 'updatedAt' }
+  ],
+  [ '_hasReadOnlyAttributes', true ],
+  [
+    '_dataTypeChanges',
+    {
+      birthday: [Function: _isChanged],
+      createdAt: [Function: _isChanged],
+      updatedAt: [Function: _isChanged]
+    }
+  ],
+  [
+    '_dataTypeSanitizers',
+    {
+      birthday: [Function: _sanitize],
+      createdAt: [Function: _sanitize],
+      updatedAt: [Function: _sanitize]
+    }
+  ],
+  [ '_hasBooleanAttributes', false ],
+  [ '_hasDateAttributes', true ],
+  [ '_jsonAttributes', Set(0) {} ],
+  [ '_virtualAttributes', Set(0) {} ],
+  [ '_defaultValues', {} ],
+  [
+    'fieldRawAttributesMap',
+    {
+      id: [Object],
+      username: [Object],
+      birthday: [Object],
+      createdAt: [Object],
+      updatedAt: [Object]
+    }
+  ],
+  [ 'uniqueKeys', {} ],
+  [ 'fieldAttributeMap', {} ],
+  [ '_hasJsonAttributes', false ],
+  [ '_hasVirtualAttributes', false ],
+  [ '_hasDefaultValues', false ],
+  [
+    'tableAttributes',
+    {
+      id: [Object],
+      username: [Object],
+      birthday: [Object],
+      createdAt: [Object],
+      updatedAt: [Object]
+    }
+  ],
+  [ 'primaryKeyAttributes', [ 'id' ] ],
+  [ 'primaryKeyAttribute', 'id' ],
+  [ 'primaryKeyField', 'id' ],
+  [ '_hasPrimaryKeys', true ],
+  [ '_isPrimaryKey', [Function (anonymous)] ],
+  [
+    '_attributeManipulation',
+    {
+      id: [Object],
+      username: [Object],
+      birthday: [Object],
+      createdAt: [Object],
+      updatedAt: [Object]
+    }
+  ],
+  [ 'autoIncrementAttribute', 'id' ],
+  [ '_scope', {} ],
+  [ '_scopeNames', [ 'defaultScope' ] ]
+]

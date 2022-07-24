@@ -1,0 +1,133 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.c-db {
+  font-size: 14px;
+}
+
+.db-layout {
+  display: flex;
+}
+
+.db-layout-sider {
+  height: 100vh;
+  width: 240px;
+}
+.db-layout-content {
+  height: 100vh;
+  // width: 240px;
+  flex: 1;
+  padding: 10px;
+  box-shadow: inset -2px -2px 5px #ddd, inset 2px 2px 5px #ddd;
+}
+
+.menu {
+  background-color: #dee0e2;
+}
+.menu ul {
+  padding: 0;
+}
+.menu__item {
+  list-style: none;
+  // border: 1px solid;
+  padding: 10px 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.menu__item-active {
+  color: white;
+  background: #9e9e9e;
+}
+.menu__item:not(.menu__item-active):hover {
+  color: red;
+  background: #9e9e9e;
+}
+.db-content table {
+  border: 1px solid #ddd;
+  width: 100%;
+  border-collapse: collapse;
+}
+.db-content table th {
+  border-right: 1px solid #ddd;
+}
+.c-form-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.14);
+}
+.c-form {
+  width: 80%;
+  max-width: 600px;
+  min-width: 500px;
+  margin: auto;
+  padding: 40px 80px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+}
+
+.c-form .form__item {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-top: 16px;
+}
+.c-form .form__item > label {
+  // margin-right: 20px;
+  width: 140px;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: right;
+}
+.c-form .form__item > input {
+  flex: 1;
+  height: 40px;
+  padding: 4px 0;
+}
+.c-form .form__item > button {
+  padding: 7px 30px;
+}
+
+.db-content {
+  table {
+    th {
+      text-align: center;
+      padding: 8px 4px;
+    }
+
+    td {
+      border: 1px solid #ddd;
+      padding: 8px 4px;
+      text-align: left;
+    }
+
+    tr {
+      background-color: #fff;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  }
+}
+
+.btn {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+.btn-group {
+  .btn {
+    margin-right: 8px;
+  }
+}

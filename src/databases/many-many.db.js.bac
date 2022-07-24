@@ -1,0 +1,69 @@
+const { Sequelize, Model, DataTypes } = require('sequelize')
+const sequelize = new Sequelize('sqlite:./sqlite_test.db', {
+  define: {
+    freezeTableName: true
+  }
+})
+
+const uppercaseFirst = str => `${str[0].toUpperCase()}${str.substr(1)}`
+
+class Image extends Model { };
+Image.init({
+  title: DataTypes.STRING,
+  url: DataTypes.STRING
+}, { sequelize, modelName: 'image' })
+
+class Video extends Model { };
+Video.init({
+  title: DataTypes.STRING,
+  text: DataTypes.STRING
+}, { sequelize, modelName: 'video' })
+
+class Comment extends Model { }
+Comment.init({
+  title: DataTypes.STRING,
+  commenttableId: DataTypes.INTEGER,
+  commenttableType: DataTypes.STRING
+}, { sequelize, modelName: 'comment' })
+// 关联
+Image.hasMany(Comment, {
+  foreignKey: 'commontableId',
+  constraint: false,
+  scope: {
+    commenttableType: 'image'
+  }
+})
+Video.hasMany(Comment, {
+  foreignKey: 'commontableId',
+  constraint: false,
+  scope: {
+    commenttableType: 'video'
+  }
+})
+Comment.belongsTo(Image, { foreignKey: 'commenttableId', constraint: false });
+Comment.belongsTo(Video, { foreignKey: 'commenttableId', constraint: false });
+
+Comment.addHook('afterFind', findResult => {
+  if (!Array.isArray(findResult)) findResult = [findResult];
+  for (const instance of findResult) {
+    if (instance.commenttableType === 'image' &&
+      instance.image !== undefined) {
+      instance.commenttable = instance.image;
+    } else (instance.commenttableType === 'video' &&
+      instance.video !== undefined) {
+      instance.commenttable = instance.video;
+    }
+
+    delete instance.image
+    delete instance.dataValues.image
+    delete instance.video
+    delete instance.dataValues.video
+  }
+})
+
+
+
+;(async () => {
+
+
+})()
